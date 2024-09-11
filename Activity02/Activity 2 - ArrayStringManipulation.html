@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array String Manipulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Array String Manipulation</h1>
+        <button onclick="manipulateArray()">Manipulate Array</button>
+        <div class="result">
+            <h2>Original Array:</h2>
+            <p id="original-array"></p>
+            <h2>Reversed Array:</h2>
+            <p id="reversed-array"></p>
+            <h2>Sorted Array:</h2>
+            <p id="sorted-array"></p>
+            <h2>Uppercase Array:</h2>
+            <p id="uppercase-array"></p>
+        </div>
+    </div>
+
+    <script>
+        function manipulateArray() {
+            // Original array of strings
+            const array = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+
+            // Display the original array
+            document.getElementById('original-array').textContent = array.join(', ');
+
+            // Reverse the array
+            const reversedArray = [...array].reverse();
+            document.getElementById('reversed-array').textContent = reversedArray.join(', ');
+
+            // Sort the array
+            const sortedArray = [...array].sort();
+            document.getElementById('sorted-array').textContent = sortedArray.join(', ');
+
+            // Convert the array to uppercase
+            const uppercaseArray = array.map(str => str.toUpperCase());
+            document.getElementById('uppercase-array').textContent = uppercaseArray.join(', ');
+        }
+    </script>
+</body>
+</html>
